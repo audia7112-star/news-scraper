@@ -1,13 +1,13 @@
-# Define here the models for your scraped items
-#
-# See documentation in:
-# https://docs.scrapy.org/en/latest/topics/items.html
-
-from dataclasses import dataclass
+import scrapy
 
 
-@dataclass
-class NewsScraperItem:
-    # define the fields for your item here like:
-    # name: str | None = None
-    pass
+class NewsItem(scrapy.Item):
+    title = scrapy.Field()
+    url = scrapy.Field()
+    source = scrapy.Field()
+    author = scrapy.Field()
+    published_at = scrapy.Field()
+    category = scrapy.Field()
+    content = scrapy.Field()
+    image = scrapy.Field()
+    scraped_at = scrapy.Field()
